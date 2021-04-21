@@ -1,0 +1,843 @@
+%% Copernicus Publications Manuscript Preparation Template for LaTeX Submissions
+%% ---------------------------------
+%% This template should be used for copernicus.cls
+%% The class file and some style files are bundled in the Copernicus Latex Package, which can be downloaded from the different journal webpages.
+%% For further assistance please contact Copernicus Publications at: production@copernicus.org
+%% https://publications.copernicus.org/for_authors/manuscript_preparation.html
+
+%% Please use the following documentclass and journal abbreviations for discussion papers and final revised papers.
+
+%% 2-column papers and discussion papers
+%\documentclass[bg, draft]{copernicus}
+\documentclass[journal abbreviation, manuscript]{copernicus}
+
+
+%% Journal abbreviations (please use the same for discussion papers and final revised papers)
+
+
+% Advances in Geosciences (adgeo)
+% Advances in Radio Science (ars)
+% Advances in Science and Research (asr)
+% Advances in Statistical Climatology, Meteorology and Oceanography (ascmo)
+% Annales Geophysicae (angeo)
+% Archives Animal Breeding (aab)
+% ASTRA Proceedings (ap)
+% Atmospheric Chemistry and Physics (acp)
+% Atmospheric Measurement Techniques (amt)
+% Biogeosciences (bg)
+% Climate of the Past (cp)
+% DEUQUA Special Publications (deuquasp)
+% Drinking Water Engineering and Science (dwes)
+% Earth Surface Dynamics (esurf)
+% Earth System Dynamics (esd)
+% Earth System Science Data (essd)
+% E&G Quaternary Science Journal (egqsj)
+% European Journal of Mineralogy (ejm)
+% Fossil Record (fr)
+% Geochronology (gchron)
+% Geographica Helvetica (gh)
+% Geoscience Communication (gc)
+% Geoscientific Instrumentation, Methods and Data Systems (gi)
+% Geoscientific Model Development (gmd)
+% History of Geo- and Space Sciences (hgss)
+% Hydrology and Earth System Sciences (hess)
+% Journal of Micropalaeontology (jm)
+% Journal of Sensors and Sensor Systems (jsss)
+% Mechanical Sciences (ms)
+% Natural Hazards and Earth System Sciences (nhess)
+% Nonlinear Processes in Geophysics (npg)
+% Ocean Science (os)
+% Primate Biology (pb)
+% Proceedings of the International Association of Hydrological Sciences (piahs)
+% Scientific Drilling (sd)
+% SOIL (soil)
+% Solid Earth (se)
+% The Cryosphere (tc)
+% Weather and Climate Dynamics (wcd)
+% Web Ecology (we)
+% Wind Energy Science (wes)
+
+
+%% \usepackage commands included in the copernicus.cls:
+%\usepackage[german, english]{babel}
+%\usepackage{tabularx}
+%\usepackage{cancel}
+%\usepackage{multirow}
+%\usepackage{supertabular}
+%\usepackage{algorithmic}
+%\usepackage{algorithm}
+%\usepackage{amsthm}
+%\usepackage{float}
+%\usepackage{subfig}
+%\usepackage{rotating}
+%\usepackage{comment}
+
+\begin{document}
+
+\title{Dynamics of the Deep Chlorophyll Maximum in the Black Sea as depicted by BGC-Argo floats}
+ %as inferred from Biogeochemical-Argo floats
+
+% \Author[affil]{given_name}{surname}
+\Author[1,2,*]{Florian}{Ricour}
+\Author[1,*]{Arthur}{Capet}
+\Author[2]{Fabrizio}{D'Ortenzio}
+\Author[1]{Bruno}{Delille}
+\Author[1]{Marilaure}{Gr\'{e}goire}
+
+
+\affil[1]{Freshwater and OCeanic science Unit of reSearch (FOCUS), University of Liege, Belgium}
+\affil[2]{Laboratoire d'Oc\'{e}anographie de Villefranche, Sorbonne Universit\'{e}s, Villefranche-sur-Mer, France}
+\affil[*]{AC and FR equally contributed to the production of this paper}
+
+%% The [] brackets identify the author with the corresponding affiliation. 1, 2, 3, etc. should be inserted.
+
+\correspondence{Arthur Capet (acapet@uliege.be)}
+
+\runningtitle{Black Sea DCM Dynamics}
+
+\runningauthor{TEXT}
+
+\received{}
+\pubdiscuss{} %% only important for two-stage journals
+\revised{}
+\accepted{}
+\published{}
+
+%% These dates will be inserted by Copernicus Publications during the typesetting process.
+
+\firstpage{1}
+
+\maketitle
+
+\begin{abstract}
+The deep chlorophyll maximum (DCM) is a well known feature of the global ocean.
+However, its description and the study of its formation are a challenge, especially in the peculiar environment that is the Black Sea.
+The retrieval of chlorophyll a (Chla) from fluorescence (Fluo) profiles recorded by biogeochemical-Argo (BGC-Argo) floats is not trivial in the Black Sea, due to the very high content of colored dissolved organic matter (CDOM) which contributes to the fluorescence signal and produces an apparent increase of the Chla concentration with depth.
+Here, we revised Fluo correction protocols for the Black Sea context using co-located in-situ high-performance liquid chromatography (HPLC) and BGC-Argo measurements. 
+The processed set of Chla data (2014--2019) is then used to provide a systematic description of the seasonal DCM dynamics in the Black Sea and to explore different hypotheses concerning the mechanisms underlying its development. 
+Our results show that the corrections applied to the Chla profiles are consistent with HPLC data.
+In the Black Sea, the DCM begins to form in March, throughout the basin, at a density level set by the previous winter mixed layer. During a first phase (April-May), the DCM remains attached to this particular layer.
+The spatial homogeneity of this feature suggests a hysteresis mechanism, i.e., that the DCM structure locally influences environmental conditions rather than adapting instantaneously to external factors. In a second phase (July-September), the DCM migrates upward, where there is higher irradiance, which suggests the interplay of biotic factors. 
+Overall, the DCM concentrates around 45 to 65\% of the total chlorophyll content within a 10 \unit{m} layer centered around a depth of 30 to 40 \unit{m}, which stresses the importance of considering DCM dynamics when evaluating phytoplankton productivity at basin scale. 
+\end{abstract}
+
+\copyrightstatement{TEXT}
+
+\introduction  %% \introduction[modified heading if necessary]
+The Black Sea is a semi-enclosed basin receiving discharges from a catchment area covering the European and Asian continents over a surface area more than four times that of the Black Sea. The intrusion of saline (salinity $\sim$ 36) Mediterranean waters into the Black Sea and the large riverine inflow have created a permanent halocline, resulting in an extremely stable vertical stratification. Waters below the main pycnocline ($\sim$ 100-150 \unit{m}) are ventilated by cold water formation and convection \citep{Ivanov1997, Stanev2003, Miladinova2018}, intrusion of the Mediterranean inflow and subsequent entrainment of surface and intermediate waters \citep{Ozsoy2001, Falina2017}, as well as mesoscale activity along the shelf break \citep{Ostrovskii2016}.
+However, these ventilation mechanisms are not sufficient to ventilate deep waters, and the residence time of Black Sea water masses increases from a few years in the main pycnocline layer to several hundred years for the deep sea \citep{murray1991}.
+Therefore, almost 90\% of the Black Sea volume is devoid of oxygen, contains large amounts of reduced elements (e.g. hydrogen sulphide, ammonium) and is only inhabited by organisms that have developed anaerobic respiration pathways. These conditions create a very specific environment, which affects many aspects of the Black Sea biogeochemical cycles. Moreover, large quantities of coloured dissolved organic matter (CDOM) are observed, much larger than in the Mediterranean Sea \citep{Organelli2014} and in the global ocean \citep{Nelson2013}. This fact results firstly from the allochthonous influx of terrestrial dissolved organic carbon (DOC) \citep{ducklow2007, margolin2016, margolin2018}. Second, anoxia is likely responsible for the accumulation of CDOM through autochthonous production of CDOM via solubilisation of fluorescent material, diffusion of fluorescent compounds out of the sediments, production of fluorescent compounds within the detrital loop and the absence of degradation of fluorescent compounds \citep{Coble1991, Para2010}.
+
+Although the relationship between the physical vertical structure and the profiles of chemical elements have been extensively investigated \citep[e.g.][]{Tugrul1992,Konovalov2001}, the imprint of the vertical density structure on living organisms at basin scale and, in particular, primary producers is by far less known. 
+
+\citet{Yunev2005} analysed the subsurface chlorophyll peak in summer over the period 1964-1992, addressing a potential shift due to eutrophication and climate change.
+More specifically, based on an analysis of 352 profiles (mostly from the Black Sea NATO TU Database) collected in the deep sea from March to November, the authors concluded that the depth of the deep chlorophyll maximum (DCM) and its chlorophyll content can be considered to be spatially homogeneous, and they highlighted a vertical decoupling between the chlorophyll subsurface peak and nitrate maximum.
+The authors highlighted the importance of considering the mechanisms of DCM dynamics in order to understand the response of primary production in the central Black Sea to the important eutrophication period that affected the Black Sea in the 1970s and 1980s.
+
+In addition, \citet{Finenko2005} showed that in the deep part of the basin, uniform chlorophyll a (Chla) profiles with high concentrations were mostly observed between December and March when winter mixing is strong and the thermocline is absent.
+By the end of spring, the thermocline begins to form and the majority of the Chla profiles showed a subsurface chlorophyll peak, highly variable in depth, that was stable until the end of summer.
+A new transition to uniform Chla profiles, due to the weakening of the thermal stratification and strengthening of the vertical mixing, occurred later in November.
+
+More recently, the composition and phenology of planktonic blooms have been investigated on the basis of in-situ sampling in concert with contemporaneous remote-sensing and autonomous profiler data, thereby focusing on local scales and addressing the mechanisms that trigger surface blooms.
+For instance, the winter-spring bloom phenology has been investigated using Chla derived from satellite data \citep{Mikaelyan2017a, Mikaelyan2017b} while in \citet{Mikaelyan2018}, in-situ data are used to identify and explain species succession.
+These papers highlight a clear differentiation of planktonic community composition in surface and subsurface layers \citep{Mikaelyan2018,Mikaelyan2020} and the importance of environmental factors such as surface winds \citep{Mikaelyan2017a} and mesoscale vertical dynamics \citep{Mikaelyan2020} in triggering local surface blooms in autumn. 
+The winter-spring bloom dynamics, and their interannual variations in particular, have been described in detail and used to propose the Pulsing Bloom hypothesis \citep{Mikaelyan2017b}, an extension of the general Critical Depth hypothesis and its derivatives \citep{Sverdrup1953, Huisman1999, Chiswell2015}, that applies to highly stratified waters.
+
+Basin scale and seasonal perspective have often been adopted in studies addressing surface Chla dynamics on the basis of remote-sensing observations, exploiting the synoptic nature of those datasets. 
+These studies generally depict a clear seasonal cycle in the central Black Sea, with maximum surface Chla concentrations observed during winter-spring and autumn blooms \citep[e.g.][]{Kopelevich2002, Finenko2014}, and minimal concentrations in summer.
+However, the extent to which this seasonal cycle is representative of vertically integrated Chla content is challenged when vertical profiles are considered \citep{Finenko2005}.
+
+Today, the advent of autonomous profilers provides a regular seasonal sampling and allows one to adopt this annual and basin-wide perspective to study the dynamics of vertical chlorophyll distributions, especially the DCM which has not yet been clearly investigated \textit{per se} in the Black Sea.
+The DCM, also known as the subsurface chlorophyll maximum \citep{Cullen2015} is a common widespread feature of the world ocean and is characterized by a subsurface layer of maximum Chla concentration.
+This Chla subsurface maximum can correspond either to a maximum in phytoplankton biomass \citep{Varela1992, Estrada1993, Beckmann2007, Mignot2014} or to a change in cellular Chla content resulting from a physiological adaptation, known as photoacclimation.
+Therefore, the DCM is not necessarily associated with a peak in biomass \citep{Fennel2003} and can either result from an adaptative mechanism to optimize growth at low light intensities \citep{Fennel2003, Dubinsky2009} or from a protective mechanism to avoid cell damage at high irradiance intensities near the water surface \citep{Marra1997, Xing2012}.
+Although it has been studied for more than 60 years \citep{Anderson1969, Cullen1982, Furuya1990, Parslow2001, Huisman2006, Ardyna2013}, the mechanisms of formation and maintenance of DCM are still under debate and have been reviewed by \citet{Cullen2015}.
+When the DCM is associated with a peak in biomass, the reasons evoked to explain its occurrence mainly refer to instantaneous factors, such as maximum growth conditions resulting from a compromise between light and nutrient limitations, aggregation at a particular density gradient \citep{Richardson1995} or reduced grazing \citep{Macedo2000}.
+
+More recently however, \citet{Navarro2013} proposed another explanation arguing that the DCM is conditioned by the history of the bloom, and emerges in spring at a density corresponding to that of the winter mixed layer.
+The DCM would act as a self-preserving biological structure that remains at a near constant density layer by preventing the nutrient flux from below to reach overlying waters, while limiting growth in the underlying waters through a shading effect.
+This theory suggests that the location of the DCM can not be solely explained by instantaneous conditions but, rather, results from hysteresis of the water mass.
+This can explain why analyses of chlorophyll profiles in the global temperate ocean and the Mediterranean Sea suggest that if the depth of the DCM is highly variable, its resident density remains largely unchanged \citep{Yilmaz1994,Ediger1996,Navarro2013}.
+
+The peculiarities of the open Black Sea environment, i.e. its strong and stable stratification, and the relatively low water transparency \citep{Kara2005}, make it an interesting site to study DCM dynamics at basin scale. 
+% If we got there .. There is something rather unique in the Black Sea which is the coupling with the phytoplanktonic phototrophic system with bacterial production. 
+% Cobble1991 and Karabashev1995 evidence photosynthetic bacterial activity in a second fluorescence peak collocated with a peak in backscattering, at the sulpĥidic interface. 
+% At the same time, as concerns biogeochemical cycling and productivity in the Black Sea, Yilmaz2006 estimate chemotrophic production to ~30% of total production (90% in the Sakarya Canyon).
+%\citep{ediger2019} provides similar estimate of 45% for the central gyre, and up to 85 % in the Rim current area. 
+% Not sure, therefore, we could ignore this specificity of the Black Sea...  
+% Suggestion : To do so, we will focus here on planktonic photosynthetic activity, although the Black Sea is notorious for hosting important bacterial photosynthetic \citep{Cobble1991, Karabashev1995, Stanev2019} and chemotrophic \citep{Yilmaz2006, Ediger2019} contribution to the overall productivity (30-45 \% in the central part, and up to 80-90\% around the Sakarya canyon), mainly occurring at very low light level in the vicinity of the sulphidic interface. 
+
+Estimation of chlorophyll concentrations from the signal produced by fluorometers requires the use of empirical equations. Indeed, the relationship between Chla and fluorescence (Fluo) can be altered due to variability in phytoplankton species composition and physiological response to environmental conditions (e.g. light, nutrients). Therefore, for a given chlorophyll concentration, the amount of emitted fluorescence may differ \citep{Claustre2009, Xing2011, Xing2012}. In addition, the presence of high concentrations of CDOM and particulate coloured detrital material (e.g. phaeopigments) can also contribute to the Fluo signal emitted within the bandwidth of Chla fluorometers \citep{Cullen1982,Proctor2010}.
+This last point is particularly critical in an anoxic environment like the Black Sea \citep{Coble1991} where a quasi-linear increase of Chla concentrations with depth has been observed \citep{Xing2017} and has been referred to in the literature as \textit{deep sea red fluorescence} \cite[e.g.][]{Roettgers2012}. 
+
+In this study, we used $\sim$ 1000 Chla profiles measured with 5 Biogeochemical-Argo (BGC-Argo) floats deployed in the Black Sea for the period 2014-2019 in order to investigate the vertical structure of the bloom and, in particular, the process of formation and maintenance of the DCM. To this aim, we derived local parameters in order to apply the correction method of \citet{Xing2017} for inferring Chla content from Fluo data, and we validated this calibration using high-performance liquid chromatography (HPLC) measurements.
+This extensive and validated dataset is then exploited to identify general characteristics of the vertical structure of Chla distribution, and to explore their seasonal and spatial variability using both depth and density vertical scales in order to describe the morphology, seasonal dynamics and relevance of DCM in the Black Sea, in particular with regard to synoptic surface Chla dynamics that are seen with remote-sensing observations.
+
+\section{Material and methods}
+\subsection{Dataset preparation}
+Data from 5 BGC-Argo floats (WMO 6900807, 6901866, 6903240, 7900591 and 7900592) were downloaded from the Coriolis data center (ftp://ftp.ifremer.fr/ifremer/argo/dac/coriolis/) for a six-year period (2014-2019), i.e. 1400 vertical profiles. All floats have a Chla fluorometer (excitation at 470 \unit{nm}; emission at 695 \unit{nm}) and a particle backscattering sensor (BBP) at 700 \unit{nm} while only floats 6900807, 6901866 and 6903240 carry a WET Labs ECO FLBBCD that includes, in addition to a Chla fluorometer and a BBP sensor, a CDOM fluorometer (excitation at 370 \unit{nm}; emission at 460 \unit{nm}). Photosynthetic available radiation (PAR) was measured with a Satlantic OCR-504 Multispectral Radiometer for all floats but one (6900807). Additionally, T and S data were obtained from a CTD Seabird model 41CP for all floats.%Oxygen (DOXY) data were provided via an AANDERAA Optode 4330 for all floats.
+
+First, we removed descending profiles, which concerns 398 profiles coming mostly from float 6900807.
+Indeed, the time interval between ascending and descending profiles is short ($\sim$ hours) in comparison with the time frame between two successive ascending profiles (10 days).
+Using both ascending and descending profiles would thus induce localized redundancy, as we could not observe significant differences in the Chla distribution between such a profile pair.
+Then, 18 profiles were removed for consistency and automatization of the data processing: missing metadata (latitude and/or longitude), no data above 5 \unit{m}, a bottom depth too shallow (i.e. less than 40 \unit{m}) 
+% among those 18, there is ONE profile that cannot be corrected by FDOM because a huge DCM appears at 150m, below the chla min ==> regression not working ==> justify this one also?
+% no data above 5 m ==> rather random, ça permet d'élimier quand meme qq profils (qui commencent trop profondément)
+or because pressure data were obviously wrong.
+Points with a Quality Control flag (QC) of 4 ("bad data") were removed from Chla profiles \citep{ADMT2017, Schmechtig2018} while data with a QC = 3 ("probably bad data") were retained because most of the time this flagging is due to the increase of measured Fluo with depth, which is common in the Black Sea.
+Indeed, the presence of large amounts of CDOM and poorly degraded Chla pigments due to anoxic conditions lead to an increase of the Chla signal with depth, resulting in an in-situ Chla dark signal estimate (Fluo value measured by the fluorometer in the absence of Chla) significantly different from its factory calibration \citep{Schmechtig2018}.
+On the other hand, BBP profiles were quality controlled (removing 4 additional profiles with QCs 3 and 4), whereas no quality filtering of CDOM values was possible due to unavailability of quality flags.
+Finally, the selected data (980 profiles of Chla, BBP and CDOM, when available) were smoothed with a 5-point moving median filter along the vertical dimension.%to ease the FITTING process and because it also allows a better CHLA (consistency?) for retrieving CHLA with the FDOM-based method.. 
+%The selected data (980 profiles of Chla, BBP and CDOM) were smoothed with a 5-point moving median filter to remove positive spikes, suspected to be irrelevant from a biological point of view.
+
+PAR data were quality controlled using the method described in \citet{Organelli2016}.
+T and S data with a QC = 1 or 2 (i.e. respectively good and probably good data) as in \citet{Wong2018} were used to compute potential density anomaly profiles ($\sigma_{\theta}$, noted here as $\sigma$), following the thermodynamic equation of seawater of 2010 \citep{IOC2010}.
+In the Black Sea, the mixed layer depth (MLD) is usually defined as the depth at which the density is greater than 0.125 \unit{kg~m^{-3}} compared to the surface density (i.e. 3 \unit{m}) as proposed by \citet{Kara2009}.
+Unfortunately, T and S data near the surface were often flagged as potential bad data.
+The MLD was thus defined as the depth at which potential density exceeded by 0.03 \unit{kg~m^{-3}} the potential density recorded at 10 \unit{m}, as proposed by \citet{DeboyerMontegut2004}.
+3 profiles were removed because their MLD could not be determined.
+
+\subsection{Retrieval of Chla from fluorometers}
+
+The retrieval of Chla data from Fluo involves three main steps: application of a regional bias correction due to fluorometer calibration issue, correction of deep sea red fluorescence due to the presence of high amounts of CDOM that affect the signal returned by Chla fluorometers, and non-photochemical quenching (NPQ) correction in the surface waters.
+
+First, due to a systematic bias in Chla data from WET Labs fluorometers, we applied a correction factor of 0.65 to all Chla profiles, following the recommendations of \citet{Roesler2017} for the Black Sea.
+
+Second, as already noted by \citet{Xing2017}, the Fluo signal measured by BGC-Argo floats in the Black Sea linearly increases with depth below 100 \unit{m} down to 1000 \unit{m} (parking depth of the float) in contrast to the typical constant offset associated with the sensor bias (from factory calibration) that can be corrected using the so-called deep-offset correction \citep{Schmechtig2018}.
+The profile of this deep sea red fluorescence is very similar to that of CDOM, as illustrated in Fig. \ref{fig:deployment_profiles}. Therefore, the Chla-Fluo equation needs to be adapted for the presence of CDOM in oxygen deficient environments.
+Here we used the method proposed by \citet{Xing2017}, referred to as the FDOM-based method, that removes the contribution of CDOM from the Chla fluorescence signal, assumed to be proportional to the amount of CDOM. This method computes two correction parameters (see Appendix \ref{sec:xing}) obtained by linear regression between Chla and CDOM below the Chla minimum (see Fig.~\ref{fig:deployment_profiles}) and then applies these correction parameters to the entire profile.
+The FDOM-based method was applied on the three floats carrying a CDOM fluorometer whereas the minimum-offset method correction described in \citet{Xing2017} was used on the other two.
+The latter consists in subtracting from each profile the minimum value of Chla found at depth (i.e. the depth at which Chla is assumed to be zero) and sets the profile to zero below that depth. Imperfect linearity between raw Chla and CDOM profiles may eventually result in small negative corrected Chla values. As such occurrences were all of insignificant amplitude and located below 80 \unit{m}, they were set to zero.
+
+Finally, all daytime profiles were corrected for NPQ, a protective mechanism triggered at cellular level in high light intensities, which induces a reduction of the fluorescence signal for an equivalent quantity of Chla.   
+%a protective mechanism against high light intensity.
+%Hence, for a same amount of Chla, NPQ causes the fluorescence signal to be reduced at high light intensities, \textit{i.e.} in the surface waters.
+Daytime and nighttime profiles were determined based on the \textit{suncalc} package (RStudio Team, 2016) which provides the local time for sunset and sunrise.
+We assume that NPQ does not affect nighttime profiles because these profiles are collected a few hours after (before) sunset (sunrise).
+Daytime profiles were corrected for NPQ by extrapolating the maximum Chla value observed over 90\% of the MLD up to the surface \citep{Schmechtig2018}. 
+
+\subsection{Data processing}
+
+In order to discriminate profiles depicting a DCM signature, all Chla profiles were fitted to 5 specific mathematical forms which are considered to represent the diversity of Chla vertical profiles \citep{Mignot2011, carranza2018}: a sigmoid ("S"), an exponential ("E"), a Gaussian ("G"), a combination of a Gaussian with a sigmoid ("GS") and a combination of a Gaussian with an exponential ("GE") (Fig. \ref{fig:5_shapes}, Appendix \ref{sec:forms}).
+The Gaussian was modified to take into account the possible asymmetry of the Chla vertical profile with higher values at the surface rather than at depth as in \citet{Mignot2011}.
+The selected 977 profiles were fitted using a nonlinear square fit function applying the Levenberg-Marquardt algorithm \citep{levenberg1978} using the R package \textit{minpack.lm}.
+For each fit, an adjusted coefficient of determination, $R^2_{adj}$, was computed to take into account the number of parameters involved in the mathematical forms and thus avoid overfitting.
+As in \citet{Mignot2011}, profiles for which the $R^2_{adj}$ was below 0.9 for all forms were classified as "Others" (27 profiles). The remaining profiles (950) were classified according to their best fit.
+
+% \begin{figure}[h!]
+%     \includegraphics[width = 10cm]{profiles5Shapes.jpg}
+%     \caption{Examples of Black Sea Chla profiles matching each of the 5 considered analytical forms.}
+%     \label{fig:5_shapes}
+% \end{figure}
+
+\begin{figure*}[h!]
+    \includegraphics[width = 15cm]{article_figures_FLORIAN_RICOUR_files/figure-markdown_github/profile_examples-1.png}
+    \caption{
+    %Examples of Chla profiles matching observed analytical functions except the 'O' shape which shows here a double Chla peak.
+    Examples of Chla profiles matched by each of the considered analytical forms.
+    Right column: DCM profiles.
+    Left column : Non-DCM profiles discriminated by the ratio between surface and DCM Chla concentration (Sect. \ref{sec:cat}), and an example for the unmatched "other" category,  which often corresponds to double Chla peaks.}
+    \label{fig:5_shapes}
+\end{figure*}
+
+\subsection{Chla sampling and float deployment}
+\label{sec:hplc_deployment}
+To validate the retrieval of Chla concentration from fluorometers in the Black Sea, a new BGC-Argo float (WMO 6903240) equipped with both Chla and CDOM fluorometers was deployed in the western Black Sea on the 29th of March 2018. Conjointly at the site of deployment, water samples were collected for Chla determination in the lab. This sampling took place on board the RV \textit{Akademik} (Institute of Oceanology – Bulgarian Academy of Sciences) at a station localized at 43°10'N and 29°E. Seawater samples were obtained using a CTD carousel equipped with twelve 5-\unit{L} Niskin bottles. Samples were taken at 12 different depths between 1000 \unit{m} and the surface, and were considered to be co-located in time and space with the float deployment. Seawater samples were vacuum filtered through 47 \unit{mm} diameter Whatman GF/F glass fibre filters (0.7 \unit{\mu m} pore size). Filtered volumes varied between 4 \unit{L} near the surface and approximately 5 \unit{L} between 100 \unit{m} and 1000 \unit{m}. After filtration, filters were immediately stored in liquid nitrogen and then at -80\textdegree C until HPLC analyses at the Villefranche Oceanographic Laboratory. These analyses were performed using the procedure from \citet{Ras2008} for the determination of Chla concentrations and other pigments. The first deep Chla profile taken by the float after deployment (during the descent) was 
+used to retrieve Chla using the FDOM correction and compared with HPLC data.
+Only one HPLC profile was taken, strictly collocated at the deployment of the new float. It was not possible to take additional collocated HPLC profiles after the float was deployed.
+Therefore, we have to assume that the absence of Chla at depth, as shown by our unique HPLC profile, is valid at basin scale and at all times. This assumption is supported by the relative spatial uniformity of CDOM profiles (not shown).
+
+\subsection{Profile diagnostics}
+\label{sec:diagdef}
+To characterize the Chla vertical distribution and its environmental context we consider the following diagnostics.
+
+\begin{itemize}
+    \item $z_{low}$ locates the deepest penetration of Chla ($>0.01$ \unit{mg~m^{-3}}).
+    \item $z_{50,bottom}$ and $z_{50,up}$ were derived as boundaries to the bulk of the chlorophyll content. 
+Both were obtained by assessing the depth needed to obtain 75\% of total Chla content by vertical integration, going downward from surface ($z_{50,bottom}$) and upward from 200 \unit{m} ($z_{50,up}$).
+These boundaries thus locate the depth interval containing 50\% of the Chla content (hereafter referred to as the bulk of Chla content or the Chla bulk). 
+    \item $z_{DCM}$ indicates the depth of the DCM.
+    \item $z_{MLD}$ indicates the depth of the MLD.
+    \item $z_{\mathrm{PAR}\,1\%}$ indicates the depth where in-situ PAR reaches 1\% of its surface values.
+\end{itemize}
+
+The pycnal depths of diagnostics presented above are noted similarly using $\sigma$ instead of $z$, and obtained from interpolation of potential density anomalies at sampling depths.
+
+\subsection{Backscattering data and normalization}
+ \label{sec:norm}
+ 
+ In order to evaluate the correspondence between chlorophyll and phytoplankton cells, we consider BBP data.
+ This is the best proxy that can be obtained from the current Black Sea BGC-Argo dataset, although the complexity and variability of the Black Sea optical properties \citep{Churilova2017} prohibit the establishment of a strict relationship between BBP and the abundance of phytoplanktonic cells.
+ To compare the Chla and BBP values from many profiles despite the variability in vertical distribution and concentration, the Chla, BBP and depth of individual profiles are normalized as follows:
+ 
+ \begin{equation}
+z_{norm} = \frac{z - z_{MLD}}{z_{DCM} - z_{MLD}}    
+\end{equation}
+  \begin{equation}
+  Chla_{norm} = \frac{Chla}{Chla_{DCM}} 
+  \end{equation}
+    \begin{equation}
+BBP_{norm} = \frac{BBP}{BBP_{max}},
+\end{equation}
+where $BBP_{max}$ is the maximum $BBP$ value evaluated for each individual profiles between the surface and 1.5 times $z_{DCM}$. The latter vertical restriction is considered to avoid the peak in $BBP$ that is typically visible in the vicinity of the anoxic interface and is related to bacterial activity \citep{Karabashev1995}.
+ 
+% \subsection{Satellite data}
+% Gap-free L4 Chla satellite products were obtained from the CMEMS catalogue \footnote{ OCEANCOLOUR\_BS\_CHL\_L4\_NRT\_OBSERVATIONS\_009\_045} and compared to BGC-Argo values by extracting match-ups at BGC-Argo sampling locations. 
+% Only data from 2019 are considered due to restricted availability of this satellite product.
+
+\section{Results}
+\subsection{Validation of the FDOM-based method in the Black Sea}
+\label{sec:validation}
+
+In this section, HPLC data taken at deployment will be compared with successive levels of correction on Chla data: 1) No correction (raw data), 2) Application of the correction factor of \citet{Roesler2017} for the Black Sea on raw data, 3) FDOM-based correction of \citet{Xing2017} and 4) NPQ correction, in order to validate the global correction of Chla profiles in the Black Sea.
+
+\begin{figure*}[h!] % for a TWO-COLUMN FIGURE, add a * to figure => \begin{figure*} 
+    %\centering
+    \includegraphics[width=18cm]{article_figures_FLORIAN_RICOUR_files/figure-markdown_github/correction_fig-1.png}
+    %\caption{Comparison between the first deep Chla profile (with different corrections) from the float 6903240 with HPLC (red squares) and CDOM (in ppb/10) in black dots. Right panel: zoom in the surface layer.}
+    \caption{Vertical Chla profiles obtained at the deployment of the float 6903240 on the 29/03/2018 at 49\textdegree10'N and 29\textdegree E, using different levels of correction. HPLC data are depicted in red squares and CDOM in black dots. Right panel: zoom in the surface layer.}
+    \label{fig:deployment_profiles}
+\end{figure*}
+
+Firstly, HPLC data evidence the absence of Chla below a depth of 200 \unit{m} (< 0.01 \unit{mg~m^{-3}}, ranging from 0.002 to 0.004 \unit{mg~m^{-3}}). HPLC also provides insight on the planktonic communities \citep{ioccgplankton}. Here, we observed a dominance of diatoms with Fucoxanthin concentrations ranging from 0.13 to 0.16 \unit{mg~m^{-3}} in the 0-50 \unit{m} range. Low abundance of dinoflagellates, prymnesiophytes, pelagophytes, cryptophytes and cyanobacteria were also observed in the 0-30 m range.
+The increase in the fluorescence signal (Fig.~\ref{fig:deployment_profiles}) that characterizes Black Sea Chla profiles, is thus not associated to Chla but more likely results from the presence of high levels of CDOM as suggested by \citet{Xing2017}. 
+
+Then, a regional correction factor of 0.65 following the recommendation of \citet{Roesler2017} was applied on all data (results in Table~\ref{tab:my_label}) before using the FDOM-based correction. The shape of the Chla profile after the FDOM correction in the surface layer is questionable.
+Based on HPLC data, it seems that it displays a Sigmoid shape. However, based on Chla not corrected for NPQ, it is qualified as a Gaussian-exponential with a $\frac{Chla_{DCM}}{Chla_{surface}}$ ratio of $\sim$ 1.8.
+Corrected for NPQ, the aforementioned algorithm qualifies it as a Gaussian-sigmoid but rejects it due to its ratio $Chla_{DCM}/Chla_{surface}$ of 1. This discrepancy highlights the importance of NPQ correction for daytime Chla profiles. %but also questions the shift between HPLC data and FDOM + NPQ corrected Chla data.
+Although, a denser vertical sampling for the HPLC acquisition would have been needed to demonstrate the total absence of a subsurface chlorophyll maximum. %as indicated by the net peak in Fig.~\ref{fig:deployment_profiles} at $\approx$ 25 \unit{m}. 
+In deeper waters, not affected by NPQ, the Chla minimum measured by the float (on the red curve, i.e. no correction) is located at 98.5 \unit{m} (0.10 \unit{mg~m^{-3}}) while the minimum non negligible value from discrete water samples (HPLC) is located at 140 \unit{m} (0.01 \unit{mg~m^{-3}}). Below that depth, Chla concentrations can be considered as zero. In the deep layer (i.e. below the Chla minimum, see also Fig~\ref{fig:deployment_profiles}), the RMSE\footnote{Root Mean Squared Error, $\mathrm{RMSE} =\sqrt{\frac{\sum_{n=1}^{N}(obs_{n} - mod_{n})^{2}}{N}}$ where $obs$ are observations, $mod$ are modeled values and $N$ is the number of points.} between Chla estimations obtained by HPLC (observations) and Chla retrieved from the ROESLER+FDOM Chla corrected profile (modeled values) is equal to 0.01 \unit{mg~m^{-3}} while the RMSE for raw data is 0.19 \unit{mg~m^{-3}}.
+In the surface layer, the RMSE is equal to 0.13, 0.05 and 0.20 \unit{mg~m^{-3}} for the ROESLER+FDOM, the ROESLER+FDOM+NPQ and the uncorrected profiles, respectively.
+Therefore, we assume that the ROESLER+FDOM+NPQ correction is a consistent approach for Chla profiles in the Black Sea, and we use the notation $Chla$ to denote $F_{Chla, ROESLER+FDOM+NPQ}$ data for the rest of the manuscript. 
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l c c c}
+         & Deep Layer & Surface Layer & Entire profile  \\ \hline
+         No correction (raw data)             & 0.19 & 0.20 & 0.22 \\
+         ROESLER          & 0.13  & 0.13  & 0.14  \\
+         ROESLER+FDOM     & 0.01 & 0.13 & 0.09 \\
+         ROESLER+FDOM+NPQ & 0.01 & 0.05 & 0.04
+    \end{tabular}
+    \caption{RMSE (\unit{mg~m^{-3}}) comparison between HPLC measurements (i.e. 12 points, see section \ref{sec:hplc_deployment} for more details) and Chla retrieved from Fluo using different levels of correction.}
+    \label{tab:my_label}
+\end{table}
+
+\subsection{Categories of Chla profiles}
+\label{sec:cat}
+Chla profiles are firstly categorized according to the best-fitting analytical form (Fig. \ref{fig:histos}).
+Despite the use of a $R^2_{adj}$ metric, it seems that the plasticity of the Gaussian-sigmoid formulation provides a best fit in most cases.
+The best-fitting form can therefore not be used as a single criterion to discriminate DCM and non-DCM profiles, and individual profiles are further requested to have a Chla concentration at the DCM that is at least a third higher than at the surface to be tagged as DCM profiles.
+This criterion was chosen based on visual inspection, to filter out profiles wrongly tagged as DCM due to signal fluctuations near the surface. 
+Non-DCM profiles dominate from November to March, while a clear DCM dynamics sets in from April to October.
+A complication arises in this DCM seasonal sequence when profiles categorized as "Others" are counted as non-DCMs.
+Those profiles most often consist in double peaks (see example Fig. \ref{fig:5_shapes}), which explains their rejection based on $R^2_{adj}$.
+Yet, all series of "Other" profiles for any individual float are systematically preceded and followed by DCM forms.
+In the following, "Others" are thus considered as local perturbations of DCM structures \citep[e.g.][]{Mikaelyan2020} and counted among DCM profiles. 
+
+The non-DCM season is largely dominated by Gaussian-sigmoid forms.
+Pure exponential profiles are never observed.
+Pure sigmoid profiles, which denote a well-homogenized planktonic biomass in the surface layer, are observed from October to April with a clear peak in December/January, in consistence with the known seasonality of the MLD in the Black Sea \citep[e.g.][]{Capet2014}.
+
+The DCM season opens mainly with Gaussian-sigmoid profiles.
+Later, Gaussian-exponential and finally simple Gaussian profiles are observed, which denote a successive depletion of the surface Chla content (Fig. \ref{fig:histos}). 
+
+\begin{figure*}[h!] % for a TWO-COLUMN FIGURE, add a * to figure => \begin{figure*} 
+    %\centering
+    \includegraphics[width=15cm]{article_figures_ARTHUR_CAPET_files/figure-markdown_github/Fig3-1.png}
+    \caption{Percentage of best-fitting forms for Chla profiles for each month. Number of profiles are given on the horizontal axis.}
+    \label{fig:histos}
+\end{figure*}
+
+No meaningful spatial pattern of the DCM period can be evidenced at first glance (Fig. \ref{fig:Spatial}) and both the beginning and end of the DCM season is consistent across the basin.
+
+\begin{figure*}[h!] 
+    \includegraphics[width=15cm]{article_figures_ARTHUR_CAPET_files/figure-gfm/Fig4-1.png}
+    \caption{Monthly spatial distribution of DCM and non-DCM profiles indicates homogeneous DCM dynamics in the open basin. This map was created using tiles by Stamen Design, under CC BY 3.0 with data from \textcopyright~OpenStreetMap contributors 2020, distributed under a Creative Commons BY-SA License.}
+    \label{fig:Spatial}
+\end{figure*}
+
+\subsection{Seasonal variations in specific diagnostics of the chlorophyll distribution.}
+\label{sec:horizons}
+We present here the seasonal evolution of diagnostics (cf. Sect. \ref{sec:diagdef}) extracted from Chla profiles and their environmental context, using both depth (Fig. \ref{fig:horizons}a) and density (Fig. \ref{fig:horizons}b) vertical scales, and considering the absolute irradiance observed at those layers (Fig. \ref{fig:horizons}c).
+Diagnostics specific to the DCM are not considered from November to March, according to Sect. \ref{sec:cat}.
+
+In winter, the mixed layer reaches a mean depth of 35 \unit{m} and extends over the entire euphotic zone (defined by the 1\% of surface incoming PAR., Fig. \ref{fig:horizons}a).
+The deepest Chla records are found near 70 \unit{m}, but most of the chlorophyll content is located within the mixed layer. Accordingly, the lower bulk boundary, $z_{50,bottom}$ coincides with $z_{MLD}$. By definition, density is homogeneous within the mixed layer, at a mean value of 14 \unit{kg~m^{-3}},  and the density scale only reveals that some Chla content is still observed within the upper pycnocline, slightly above the 15 \unit{kg~m^{-3}} density layer (Fig. \ref{fig:horizons}b).
+A similar situation lasts for December, January and February.
+
+
+In March, $z_{MLD}$ decreases with the progressive onset of  stratification.
+The upper boundary of the bulk Chla content evolves slightly downwards, with a progressive appearance of DCM profiles (Fig. \ref{fig:histos}).
+In April, all depth-diagnostics of the Chla distribution migrate downward, together with the euphotic depth. At the same time, the absolute PAR observed at those horizons remains relatively unchanged (Fig. \ref{fig:horizons}c). Deep Chla records are observed at 80 \unit{m}, which is the annual maximum. The DCM is now firmly formed at a depth of about 40 \unit{m}.
+From April to May, the DCM remains close to the lower bulk boundary, and the Chla vertical distribution presents a notable downward skewness. In particular the DCM is recorded at relatively low absolute irradiance levels, in average below 10 \unit{\mu mol \, photons \,m^{-2}\,s^{-1}}.
+On a density scale, $\sigma_{50,bottom}$ is observed near the layer of the winter $\sigma_{MLD}$ and a collocation between $\sigma_{DCM}$ and $\sigma_{50,bottom}$ persists until May.
+
+In June, the vertical Chla distribution shifts towards a  structure that remains stable during the month of July and August.
+During this period, the DCM depth is sensibly shallower (30 \unit{m}) than during the DCM formation months. The median value of $z_{DCM}$ is now clearly distinguished from that of $z_{50,bottom}$, and the skewness in the vertical Chla distribution is weaker.
+The DCM is also found at higher PAR value than during the period of Apr-May (Fig. \ref{fig:horizons}c).
+On the contrary, the PAR values at $z_{50,top}$, $z_{50,bottom}$ and $z_{50,low}$, remains practically unchanged during the entire year. From June to August, the bulk Chla progressively narrows around $z_{DCM}$ (see $z_{50,bottom}$ and $z_{50,top}$, Fig. \ref{fig:horizons}a) and remains located well below $z_{MLD}$.
+
+In September, the thermocline starts to weaken. In contrary to what was observed between March and April, $z_{50,top}$, $z_{50,bottom}$ and $z_{low}$ migrate upward, together with the euphotic depth, while they remains at a similar location in terms of PAR.
+On a density scale, it appears that $\sigma_{50,bottom}$ still remains at its previous location, while the upper boundary $\sigma_{50,top}$ is lifted up to lighter layers, and presents an important variability. 
+In October, the deepening MLD reaches the upper part of the bulk Chla.
+%is well eroded by the surface mixed layer. 
+An important decrease occurs in the proportion of DCM profiles (Fig. \ref{fig:histos}): this is the end of the DCM season. 
+
+%There are thus different phases in the seasonal development of the Black Sea DCM.
+%It is instructive to consider the variability around the median and mean values of the above diagnostics within these different phases. 
+%After the DCM formation in March, a first phase lasts for April-May, during which the variability of Chla horizons is relatively narrow on a density scale, and relatively important in terms of absolute irradiance. 
+%Then a transition occurs in June and leads to the second phase (July-September) during which the variability increases on the density scale, and substantially decreases in terms of absolute irradiance.
+
+Interestingly, the position of the deepest Chla records is remarkably stable along the season in terms of absolute irradiance, and hence undergoes seasonal variations in depth coordinates as the surface incoming irradiance increases in summer.
+On a density scale, it just overlays the nitracline level, located at 15.5 \unit{kg~m^{-3}} by \cite{Konovalov2006}.
+
+\begin{figure*}[h!] 
+    %\centering
+    \includegraphics[width=17cm]{article_figures_ARTHUR_CAPET_files/figure-gfm/FigR5-1.png}
+    \caption{Seasonal variations in the position of horizons characterizing the Chla vertical distribution and its environment on a) depth, b) density and c) PAR irradiance scales.
+    Boxplots indicate monthly medians and interquartile ranges.
+    Continuous lines indicate monthly means and their 95\% confidence interval (shaded area, bootstrap estimates).
+    While boxplots are slightly shifted horizontally to avoid overlapping, the means are all centered on the monthly grid.
+    %and if we want to add more : Boxplot notches provide 95% confidence interval to compare medians, while whiskers, the small bars, extends untill last value OR median+1.5 IQR, outlying values are then depicted as point. All of which is described in the help of ggplot and Hmisc R packages. 
+    }
+    \label{fig:horizons}
+\end{figure*}
+
+\subsection{Chla concentrations and vertically integrated content}
+Here, we consider seasonal variations in Chla concentrations at the surface, at the DCM and in the total Chla content, i.e. the concentration integrated over the vertical.
+In the following, the %"average" Chla concentration is defined as the 
+total Chla content is scaled by a constant depth of 40 \unit{m} to reach units of volumetric concentration (\unit{mg~m^{-3}}).
+The arbitrary scale of 40 \unit{m} corresponds to the mean of $z_{50,bottom}$.
+
+Ranging between 0.5 and 2 \unit{mg~m^{-3}} (i.e. 20 and 80 \unit{mg~m^{-2}}), the total Chla content only presents weak seasonal variations with a maximum in March (Fig. \ref{fig:partsandconc}a). 
+Surface chlorophyll concentration, instead, has a marked seasonal variability and decreases by a factor of two to reach 0.35 \unit{mg~m^{-3}} from April to September, while Chla concentrations at the DCM is generally close to 0.8 \unit{mg~m^{-3}} in this period and reaches mean values above 1 \unit{mg~m^{-3}} in August.
+To summarize, roughly 80\% of the total Chla content is contained within the MLD in winter, while this ratio falls to 10\% during the DCM season (Fig. \ref{fig:partsandconc}b).
+In summer, about 50\% of the total content can be found within a 10 \unit{m} layer surrounding the DCM, a value that peaks in August and reaches 80\% in some cases. 
+
+\begin{figure*}[h!] % for a TWO-COLUMN FIGURE, add a * to figure => \begin{figure*} 
+    \centering
+    \includegraphics[width=15cm]{article_figures_ARTHUR_CAPET_files/figure-gfm/FigR6-1.png}
+    \caption{Seasonal variations in a) surface, DCM and total Chla concentrations and b) relative parts of the total Chla content around specific horizons. The total Chla concentration in a) is the vertical integral of Chla concentration scaled by a constant depth of 40 \unit{m} to reach unit of volumetric concentrations (\unit{mg~m^{-3}}).}
+    b) 
+    \label{fig:partsandconc}
+\end{figure*}
+
+For the interested readers, we propose in App. \ref{sec:interannual} the interannual equivalent of Figs. \ref{fig:horizons} and \ref{fig:partsandconc}, although we decided to concentrate this study on describing a typical seasonal cycle, considering that the data were too scarce to support a reliable interannual analysis.
+
+\subsection{Normalized chlorophyll and backscattering profiles}
+We analyze here the Chla and BBP values for DCM profiles only.
+In particular, we seek for an eventual correspondence between local maxima in Chla and BBP at $z_{DCM}$, or a vertical shift in the position of these maxima, in order to characterize the nature of the DCM.
+Indeed, a Chla profile such as recorded by BGC-Argo floats only reflects the product between a profile of planktonic biomass and a profile of their cellular Chla content.
+It is only considered \textit{per se} for the reason that it is easily measurable. 
+
+In order to provide a general overview of all profiles despite their disparity in terms of DCM depths and concentrations,
+a normalized referential was used to build Fig. \ref{fig:backscat} (see Sect. \ref{sec:norm} for a description of the normalization procedure).
+The fact that narrow maxima of Chla are depicted at the normalized depth of 1, which is defined on the basis of the calibrated $Z_{max}$ parameter  of the best-fitting analytical forms (App. \ref{sec:forms}), simply confirms the reliability
+of the approach considered to characterize the DCM, i.e the classification protocol and the use of parameters issued from their calibration.
+
+% In March and October, the ratio between normalized BBP and Chla value shows less variations between normalized depth of 1 ( the DCM depth than for other months, as can be expected for mixed conditions.
+A well defined maximum in BBP can be seen at the DCM depth in March.
+A similar local maximum in BBP profiles can also be seen close to the DCM reference depth for other months, but never as clearly as for the month of March.
+
+The ratio between normalized BBP and Chla value then evidences an important difference between the two phases of the DCM period described in Sect. \ref{sec:horizons}. 
+During the first phase of the DCM period (Apr-May), a peak in this ratio is clearly visible at the DCM depth, while from June and during the second phase (Jul-Sep) the peak in the Chla/BBP ratio is found below the DCM depth.
+
+\begin{figure*}[h!] 
+ \centering
+    \includegraphics[width=17cm]{article_figures_ARTHUR_CAPET_files/figure-gfm/Fig10-1.png}
+    \caption{Distribution of normalized Chla and BBP values for different layers of normalized depth. The depth is normalized for each profile so that values of one and zero corresponds to the depths of DCM and MLD, respectively (see Sect. \ref{sec:norm} for the normalization procedure).  }
+    \label{fig:backscat}
+\end{figure*}
+
+\section{Discussion}
+\subsection{Using BGC-Argo to decipher the Black Sea DCM dynamics}
+\label{disc1}
+The spatial distribution of BGC-Argo data in the Black Sea is presently incomplete and opportunistic. In addition, in the Black Sea BGC-Argo floats tend to exclude areas characterized by divergent flows such as the shelf regions or the centers of the two central gyres.
+However, the Argo sampling protocol permits regular seasonal sampling of the central basin, which constitutes an important asset compared to traditional cruise-based datasets, and provides a satisfactory number of observations for seasonal analysis (numbers of profiles for each month are given in Fig. \ref{fig:histos}). 
+Furthermore, the dense vertical sampling obtained from BGC-Argo floats permits a refined characterisation of DCM depth- and density-diagnostics. 
+
+At present BGC-Argo floats only provide limited proxies to evaluate the relationships between chlorophyll content and phytoplankton biomass, which is essential to upscale the present analysis to larger scale considerations such as productivity and carbon sequestration issues.
+However, the fact that the first DCM profiles in March correspond to a clear maximum in BBP (Fig. \ref{fig:backscat}) suggests that the DCM is initiated also as a peak in phytoplankton biomass and not only as a local increase in the chlorophyll cellular content, as suggested by \citet{Finenko2005}. 
+
+In the first phase (Apr-May), no clear vertical shift can be seen between the (normalized) profiles of  Chla, BBP and their ratio. 
+In the second phase (Jul-Sep), however, a maxima in the Chla/BBP ratio is clearly seen below the DCM depth, which is similar to the theoretical profiles of \citet{Fennel2003} that describe the imprint of photoacclimation mechanisms on the vertical distribution of phytoplankton biomass and their Chla content. 
+This important difference between the two phases of the DCM periods suggests that the influence of photoacclimation mechanisms on the shapes of Chla profiles evolves seasonally, which nuances the conclusions of \cite{Finenko2005}.
+Furthermore, according to \citet{Fennel2003}, it suggests that a subsurface maximum in planktonic biomass may exist above the DCM during the second phase. 
+
+Figure \ref{fig:backscat} shows high BBP values in the upper part of the normalized scale (i.e. between $z_{MLD}$ and $z_{DCM}$) that are not mirrored in the Chla records.
+This vertical discrepancy may indicate 1) the presence of non-phytoplanktonic particles in the upper layers, 2) larger cellular Chla content in phytoplankton located around the DCM, and/or 3) an important difference in terms of phytoplanktonic communities, and in particular in terms of cell size. 
+The known disparity in species dominance between surface and subsurface waters \citep{Mikaelyan2020}, in particular regarding the size of dominant species, prevents consideration of a strict relationship between particle backscatterring and planktonic biomass, so that we cannot argue for one or another of the above propositions. 
+However, the peak in BBP that is visible near the DCM depth for several months supports the hypothesis that the DCM does, to some substantial extent, correspond to a local peak in planktonic biomass.
+
+BGC-Argo floats thus provide evidences for a clear seasonal DCM dynamics that prevails over the entire central Black Sea, with almost all profiles categorized as DCM from April to September (Fig. \ref{fig:histos}), and suggests the existence of two distinct phases during which the relationship between Chla and phytoplankton biomass differs.
+During this period, the DCM concentrates about 45-65\% (and up to 80\% in some specific cases) of the total Chla content inside a 10 \unit{m} layer located from 40 to 30 \unit{m} below the surface, where local PAR irradiance ranges from 4 to 15 and from 10 to 20 \unit{\mu mol \, photons \,m^{-2}\,s^{-1}}, for the first (Apr-May) and second (Jul-Sep) phases, respectively (reporting first and third quartiles). 
+
+These DCM depth estimates are deeper than those previously reported by \citet{Finenko2005}, but the lack of overlapping data precludes and association with either methodological factors or interannual variability.
+One could consider, however, the fact that 
+both \citet{Yunev2005} and \cite{Finenko2005} used a single analytical form (modified Gaussian) to characterize Chla distribution as a function of depth during the DCM season.
+In particular, to ignore the distinction between DCM and non-DCM profiles may considerably bias DCM diagnostics estimates.
+
+\subsection{Considering horizontal variability in the different vertical coordinate systems}
+Both \citet{Yunev2005} and \cite{Finenko2005} considered depth coordinates to characterise the vertical distribution of Chla during the DCM period. 
+\citet{Yunev2005} completed their analysis by assessing, for each considered profile, the depth of the 16.2 \unit{kg\,m^{-3}} isopycnal, in order to characterize subregions (or "hydrodynamic regimes") of the central Black Sea.
+The authors concluded that $z_{DCM}$ can be considered as independent from hydrodynamic regimes, which amounts to saying that depth-diagnostics are sufficiently consistent across the basin to serve as the basis for an interannual trend analysis.  
+On the contrary, \citet{Finenko2005} highlighted the variability of $z_{DCM}$ and its relationship with the surface Chla content, as the authors aimed to identify a general formulation to retrieve the vertically integrated biomass from remote sensing surface observations.
+The authors did not further comment on the spatial structure of the DCM diagnostics. 
+
+No clear spatial pattern emerges from the analysis of the DCM depth-diagnostics, and  Fig. \ref{fig:Spatial} highlights that the seasonality of the DCM dynamics is consistent over the entire central basin. 
+In this regard the Black Sea differs from the Mediterranean Sea, where clear longitudinal gradients in environmental conditions (nutrients and light) induce spatial gradients for DCM characteristics, visible all along the DCM period \citep{Letelier2004, Mignot2014, Lavigne2015}.
+
+Nevertheless, the open Black Sea does present a major spatial structure which lies in the general curvature of isopycnals: layers of equal density are dome-shaped and significantly shallower in the center than in the periphery \citep{murray1991}.
+In addition, isopycnals undergo vertical displacement at time scales from hours (internal waves, inertial oscillations scale at about 17\unit{h} in the Black Sea, e.g. \citet{Filonov2000}) to weeks (eddies and mesoscale dynamics, \citet{Stanev2013}).
+This leads many authors to use density, rather than depth, as a vertical coordinate system \citep{Tugrul1992} in order to minimize the spread of vertical diagnostics characterizing layers that are mostly maintained by isopycnal diffusion, such as the nitracline and oxycline depths.
+Here, the spread of monthly diagnostics are depicted by the interquartile ranges in Fig. \ref{fig:horizons}, and mainly derive from interannual and/or horizontal variability.
+We assume that a seasonal change in the spread of the position of specific horizons, presented on depth, density or irradiance scales, can be exploited to decipher which driving factors rule the development and structure of DCM dynamics in the Black Sea.
+
+\subsection{Drivers of the seasonal DCM dynamics}
+It is remarkable that the irradiance values recorded at $z_{50,top}$, $z_{50,bottom}$ and $z_{low}$ are essentially constant over the seasonal cycle.
+The seasonal vertical displacement of those horizons on a depth scale may thus be associated with the seasonal variation in the surface incoming radiation, which is significant at the latitudes of the Black Sea.
+Such a simplified description does not hold, however, for $z_{DCM}$, which we detail as follows.
+
+During winter, the MLD extends beyond the euphotic depth (Fig. \ref{fig:horizons}a). 
+The appearance of a DCM at the base of the MLD, when it is shoaling at the end of winter, is thus in agreement with the general Sverdrup theory (and its extensions described in the introduction).
+
+During the first phase of the DCM season (Apr-May), the DCM remains close to the density layer that corresponds to the winter MLD. Following \cite{Navarro2013}, this is highlighted by the ratio obtained between individual $\sigma_{DCM}$ values and $\sigma_{MLD,max}$, i.e. the maximum $\sigma_{MLD}$ value registered by the same float in the same year (Fig. \ref{fig:discfig}).
+This ratio is close to unity during the first phase of the DCM period, regardless of spatial or interannual variability, which clearly indicates that the depth of initial DCM settlement is ruled basin-wide by the vertical extent of the winter MLD, and that this initial location holds for at least two months. 
+Note that the spread of $PAR_{DCM}$ (Fig. \ref{fig:horizons}c) is large during this first phase, which further supports the hypothesis for density-related driving factors in setting the vertical position of the DCM. 
+
+\begin{figure*}[h!] 
+    \includegraphics[width=15cm]{article_figures_ARTHUR_CAPET_files/figure-gfm/Fig11-1.png}
+    \caption{Ratio between the $\sigma_{DCM}$ of individual profiles and the maximum $\sigma_{MLD}$ recorded by the same float during the same year. West and East longitude are defined with respect to the  meridian of 34.5\textdegree E}
+    \label{fig:discfig}
+\end{figure*}
+
+Obviously, fast biomass regeneration occurs within the DCM.
+The standing DCM thus results from a balance between growth, loss and transport terms that respond to environmental factors, i.e. mainly nutrient fluxes from below, light fluxes from above, density gradients and grazing pressure \citep{Cullen2015}. 
+But the environment to which these terms respond is shaped by the presence of the DCM.
+For instance, accounting for light attenuation by phytoplankton and nutrient recycling upon cellular decay provides mechanistic explanations for such “bending forces” \citep[e.g.][]{Klausmeier2001, Beckmann2007}.
+The fact that such mechanisms induce hysteresis in the pycnal position of the DCM, and that this is the most likely explanation for the high concordance between density DCM position and density reached by winter MLD is essentially the message of \citet{Navarro2013}. 
+Our results concur with this description for the first phase of the DCM period, during which BBP profiles also suggest that photoacclimation mechanisms have not yet induced a substantial structure in the BBP to Chla ratio (Sect. \ref{disc1}).
+
+We then observe in June a shift towards a different DCM structure that holds from July to September. This shift involves: 
+i) a decoupling between particle backscattering (our best proxy for biomass; Fig. \ref{fig:backscat}) and chlorophyll profiles, and the establishment of a maximum in the Chla/BBP ratio below the DCM, which suggests impacts of photoacclimation mechanisms on the DCM structure \citep{Fennel2003};
+ii) the appearance of pure Gaussian profiles (Fig. \ref{fig:histos}) implying depletion of surface Chla content;
+iii) an upward displacement of the DCM, on both depth and pycnal scales (Fig. \ref{fig:horizons}a,b) and an upward displacement of the DCM in terms of the irradiance scale (Fig. \ref{fig:horizons}c), from about 4--15 to about 10--20 \unit{\mu mol\, photons \,m^{-2}\,s^{-1}}; 
+iv) a decrease in the spread of the irradiance value at the DCM (see the interquartile ranges on Fig. \ref{fig:horizons}c);
+v) a gradual increase (peaking in August) of Chla concentration at the DCM (Fig. \ref{fig:partsandconc}a), and in the proportion of total Chla content that is located around the DCM (Fig. \ref{fig:partsandconc}b).
+
+The fact that this shift occurs at the time of the year when surface irradiance is maximal, and opposes the expected responses to increased surface incoming irradiance (i.e. a downward displacement of the DCM; \citet{Beckmann2007}), suggests an important role of biotic factors in reshaping the vertical distribution of Chla, e.g. species succession in phytoplanktonic population \citep{Mikaelyan2018} and/or changes in grazing pressure; or a substantial seasonal increase in the upward nutrient supply.
+We tend to favor the lead of biotic factors, since seasonal assessment of the vertical turbulent transport in the Black Sea points towards a decrease of diapycnal diffusion during the warm period \citep{Podymov2020-ls} which, again, would bring the DCM downward. 
+However, these are hypotheses that we do not have the means to confirm on the basis of the considered dataset.
+
+In October, as the DCM season ends, spread in $\sigma_{DCM}$ (Fig \ref{fig:horizons}b) $\PAR_{DCM}$ (Fig \ref{fig:horizons}c) largely increases.
+For the first time in the year, a clear spatial differentiation occurs as the DCM evolves away from the density layer of the  winter MLD, significantly more in the western basin than in the east (Fig. \ref{fig:discfig}).
+This indicates that, upon closure of the DCM season, the environmental conditions that drive the DCM upward are affected by a significant spatial variability. 
+A likely explanation for this longitudinal difference lies in the fact that lateral nutrient inputs are enhanced in the western part of the basin by the proximity of the northwestern shelf system.
+We thus suggest that lateral nutrient inputs trigger this spatial disparity in the very last months of the DCM season, which concurs with the fact that nutrient export from the north-western shelf to the open sea has been evaluated to be maximal in October \citep{gregoire2004}.
+
+Ultimately, model studies would be required to test different hypotheses on the driving forces of DCM dynamics, and to make comparisons with those identified in other parts of the world considering in particular, the neighboring Mediterranean Sea \citep{Terzic2019}.
+
+\conclusions 
+%% \conclusions[modified heading if necessary]
+In this study, we use BGC-Argo data (2014--2019, about 1000 profiles) to characterize the vertical distribution of Chla in the Black Sea. 
+We first highlight the importance of processing raw fluorescence data obtained from BGC-Argo floats to obtain accurate Chla estimates, which involves: i) applying a sensor correction \citep{Roesler2017}; ii) a correction for CDOM fluorescence as proposed by \citet{Xing2017}, and iii) non-photochemical quenching as proposed by \citet{Xing2012}.
+While the above procedures are validated on the basis of an HPLC in-situ profile, we suggest that further in-situ HPLC datasets should be consolidated in order to fine-tune corrections of BGC-Argo Fluo measurements in the Black Sea.
+
+The processed Chla dataset is then used to
+characterize seasonal changes in the vertical distribution of Chla, and to discuss the mechanisms that underlie the DCM dynamics.
+Our analyses reveal DCM dynamics that dominate Chla distribution from April to October over the entire central basin, in agreement with previous studies \citep{Yunev2005,Finenko2005}.
+While \citet{Yunev2005} considered that DCM depth-diagnostics were sufficient to infer long term trends from limited datasets, the detailed vertical sampling provided by BGC-Argo floats and the use of refined analytical forms to distinguish between DCM and non-DCM profiles allowed us to demonstrate i) that a significant variability affects DCM diagnostics when expressed on a depth scale and ii) that the DCM season can be divided into two phases with distinct driving mechanisms.
+Our analysis indeed indicates that, during the first phase (April-May), the DCM remains attached to the density layer reached by the winter maximum MLD.
+This concurs with the hysteresis hypothesis proposed by \citet{Navarro2013}, in which the DCM is seen as a self-sustaining structure that influences its surrounding environment, rather than a local maximum adapting instantaneously to external factors. 
+During the second phase (July-September), we suggest that biotic factors are responsible for an upward displacement of the DCM structure, visible in depth, density and irradiance scales, since increased surface irradiation and reduced diapycnal mixing at the pycnocline would normally induce a downward displacement.
+On average, the DCM concentrates about 50\% (resp. 55\%) of the total Chla content within a 10 \unit{m} layer centered at a depth of about 40 \unit{m} (resp. 30 \unit{m}), for the first and second phases, respectively.  
+It is only towards the end of the thermocline season (October) that the disturbed DCM structure indicates a substantial spatial gradient, which we suggest is structured by the enhanced lateral inputs of nutrients in the western region.
+
+At present the Black Sea BGC-Argo dataset does not allow us to establish a strict relationship between Chla and planktonic biomass. 
+The DCM is clearly associated with an increase of intra-cellular chlorophyll content at depth during the second phase, which shows the typical signatures of photoacclimation mechanisms \citep{Fennel2003}.
+However, the presence of local peaks in BBP profiles at the DCM depth suggests that the DCM can also be associated with peaks in biomass.  
+
+This study highlights the importance of considering DCM dynamics in assessments of Black Sea productivity.
+In order to further appreciate its interannual variability, and to strengthen the extrapolation from Chla to actual biomass and productivity, we encourage continuous support and enrichment of the Black Sea BGC-Argo fleet in terms of both the number of floats and equipped sensors. 
+
+%% The following commands are for the statements about the availability of datasets and/or software code corresponding to the manuscript.
+%% It is strongly recommended to make use of these sections in case datasets and/or software code have been part of your research the article is based on.
+
+%\codeavailability{TEXT} %% use this section when having only software code available
+%\textcolor{blue}{Github repository ready to be shared if deemed necessary : https://github.com/fricour/DCM-Black-Sea-Paper}
+
+%\dataavailability{TEXT} %% use this section when having only datasets available
+%\textcolor{blue}{It could be considered to add enhanced argo datafiles, OR provide the R script to apply the correction on newly issued Argo files (more interesting).}
+
+\codedataavailability{Processed data and scripts used for the analyses and figures used in this study are uploaded on GitHub and available at the Zenodo repository \citet{florian}} %% use this section when having data sets and software code available
+
+
+%\sampleavailability{TEXT} %% use this section when having geoscientific samples available
+
+%\videosupplement{TEXT} %% use this section when having video supplements available
+
+\appendix
+\section{FDOM Method}    %% Appendix A
+\label{sec:xing}
+According to the following equation:
+\begin{equation}\label{eq:Xing2017}
+    FChla_{cor} = FChla_{meas} - FChla_{dark} - Slope_{FDOM} \cdot (FDOM_{meas} - FDOM_{dark}) 
+\end{equation}
+where $FChla_{cor}$ is the corrected Chla obtained by removing from the measured Chla ($FChla_{meas}$) the sensor bias ($FChla_{dark}$, dark signal measured in the absence of Chla) and the contribution from CDOM estimated as proportional (coefficient $Slope_{FDOM}$) to the amount of CDOM estimated as the measured CDOM ($FDOM_{meas}$) corrected for the sensor bias ($FDOM_{dark}$). All values are obtained after conversion from Fluo values (in voltage or digital counts) with parameters provided by the manufacturer of each sensor, in \unit{mg~m^{-3}} for Chla and in \unit{ppb} for CDOM. $Slope_{FDOM}$ represents the ratio between the fluorescence of CDOM measured by a Chla and a CDOM fluorometer. This ratio is assumed to be constant over depth and its units are given in \unit{mg~m^{-3}} \unit{ppb~^{-1}}.
+
+Below a certain depth, $FChla_{meas}$ should be zero and hence Equation (\ref{eq:Xing2017}) gives:
+\begin{equation}\label{eq:xing2017_1}
+    FChla_{meas} = FChla_{dark} + Slope_{FDOM} \cdot (FDOM_{meas} - FDOM_{dark})
+\end{equation}
+That can also be written as:
+\begin{equation}\label{eq:xing2017_2}
+    FChla_{meas} = Slope_{FDOM} \cdot FDOM_{meas} + \alpha
+\end{equation}where $\alpha$ $= FChla_{dark} - Slope_{FDOM} \cdot FDOM_{dark}$.
+
+$\alpha$ is a constant bias that results from factory calibration error. Equation \ref{eq:xing2017_2} shows that $Slope_{FDOM}$ and $\alpha$ can be retrieved with a linear regression in the depth range where $FChla_{meas}$ is expected to be zero due to the - assumed - absence of Chla. This depth range starts at the Chla minimum down to the bottom of the profile. In all investigated profiles, the Chla minimum is always deeper than the MLD or the DCM during the stratified season and never below 400 \unit{m} thus the determination of the depth range for the linear regression is easier than in \citet{Xing2017}. Once $Slope_{FDOM}$ and $\alpha$ are known, the profile can be corrected according to Equation \ref{eq:Xing2017}.
+
+\section{Analytical forms of Chla profiles}     %% Appendix A1, A2, etc.
+\label{sec:forms}
+Chla profiles were fitted with the following analytical forms: a) Sigmoid, $F(z) = \frac{F_{surf}}{1+e^{(Z_{1/2}-z)s}}$ with $F_{surf}$, the Chla surface concentration, $Z_{1/2}$ the depth at which the Chla concentration is half the Chla concentration at the surface and $s$ the proxy of the sigmoid fit slope at $Z_{1/2}$; b) Exponential, $F(z) = F_{surf}e^{-\frac{ln~2}{Z_{1/2}}\cdot z}$; c) Gaussian, $F(z) = F_{max}e^{-\frac{(z-Z_{max})^2}{dz^{2}}}$ with $F_{max}$, the maximum Chla value, $Z_{max}$, the depth of the DCM and $dz$, the proxy of the Gaussian fit thickness; d) Gaussian-Exponential, $F(z) = F_{surf}e^{-\frac{ln~2}{Z_{1/2}}\cdot z} + F_{max}e^{-\frac{(z-Z_{max})^2}{dz^{2}}}$; e) Gaussian-sigmoid, 
+$F(z) = \frac{F_{surf}}{1+e^{(Z_{1/2}-z)\cdot s}} + F_{max}e^{-\frac{(z-Z_{max})^2}{dz^{2}}}$
+
+The initial parameters used before the fitting procedure were chosen based on the observed profiles. $F_{surf}$ was chosen to be the mean Chla value in the MLD, $Z_{1/2}$ was chosen as the depth where $F_{surf}$ was divided by 2 or replaced by the MLD if the MLD was deeper than $Z_{1/2}$. $Z_{max}$ and $F_{max}$ followed their definition while $dz$ and $s$ were initially fixed at, respectively, 5 \unit{m} and -0.01. In this configuration, the algorithm converged in most cases.
+
+
+\section{Interannual variability}
+\label{sec:interannual}
+Analyzing the interannual variability of the DCM seasonal sequence on the basis of the BGC-Argo dataset is difficult.
+First, because the dataset only expands over five years.
+Second, because subsetting the data per year gives even more place to the artifacts induced by uneven spatial sampling, the latter being particularly relevant for 2014 ($\sim$ max 10 profiles/month).
+
+Yet, to give a general appreciation of the stability of the DCM seasonal dynamics, Fig. \ref{fig:interannual} provides the specific annual expressions of the seasonal dynamics illustrated in Figs. \ref{fig:horizons} and \ref{fig:partsandconc}. 
+
+The most striking features is the relative stability of the DCM seasonal cycle. Although some years do present some notable anomalies with respect to the average seasonal cycle, no clear systematic implications could be drawn from this limited dataset. Questioning the drivers of interannual variability of the seasonal DCM dynamics is thus left over for further studies. 
+We redirect the interested reader to such a corresponding recent analysis proposed by \citet{Kubryakova2020}.
+
+\begin{figure*}[h!] 
+    \includegraphics[width=14cm]{article_figures_ARTHUR_CAPET_files/figure-gfm/Fig12-1.png}
+    \caption{\label{fig:interannual}
+    Interannual variability (year-specific monthly medians) depicted with general monthly seasonal medians, for Figures \ref{fig:horizons}a , \ref{fig:horizons}b , \ref{fig:partsandconc}b, and \ref{fig:partsandconc}a.}
+\end{figure*}
+
+
+\noappendix       %% use this to mark the end of the appendix section
+
+%% Regarding figures and tables in appendices, the following two options are possible depending on your general handling of figures and tables in the manuscript environment:
+
+%% Option 1: If you sorted all figures and tables into the sections of the text, please also sort the appendix figures and appendix tables into the respective appendix sections.
+%% They will be correctly named automatically.
+
+%% Option 2: If you put all figures after the reference list, please insert appendix tables and figures after the normal tables and figures.
+%% To rename them correctly to A1, A2, etc., please add the following commands in front of them:
+
+%\appendixfigures  %% needs to be added in front of appendix figures
+
+%\appendixtables   %% needs to be added in front of appendix tables
+
+%% Please add \clearpage between each table and/or figure. Further guidelines on figures and tables can be found below.
+
+\authorcontribution{FR, AC and MG conceptualized the research project. FR and AC proceeded to data curation and validation, formal analysis, conducted the investigation, produced the software code and visualizations and wrote the initial draft. MG acquired the funding. AC, FO and MG supervised the execution of this study. All authors contributed to discuss the methodology and to edit and comment the final draft. FO and BD provided resources and supervision for the experimental part.} %% this section is mandatory
+
+\competinginterests{The authors declare that they have no conflict of interest.} %% this section is mandatory even if you declare that no competing interests are present
+
+% \disclaimer{TEXT} %% optional section
+
+\begin{acknowledgements}
+FR would like to thank Marin Cornec and Louis Terrats, PhD students at the Villefranche Oceanographic Laboratory for the scripts they provided (NPQ correction and PAR quality control, respectively). FR would also like to thank Snejana Moncheva, director of IO-BAS and the crew of the RV \textit{Akademik} for their conviviality and their help during the cruise. The authors would like to thank Pierre-Marie Poulain for having provided the BGC-ARGO float for deployment. Finally, FR would like to thank Josephine Ras and Céline Dimier for their help with the HPLC analysis. FR, AC, BD and MG are research fellow, postdoctoral, research associate and research director of the Fonds de la Recherche Scientifique - FNRS, respectively.
+%ADDED
+The data used in this manuscript were collected and made freely available by the International Argo Program and the national programs that contribute to it (http://www.argo.ucsd.edu, http://argo.jcommops.org)
+\end{acknowledgements}
+
+%% REFERENCES
+
+%% The reference list is compiled as follows:
+
+%\begin{thebibliography}{}
+
+%\bibitem[AUTHOR(YEAR)]{LABEL1}
+%REFERENCE 1
+
+%\bibitem[AUTHOR(YEAR)]{LABEL2}
+%REFERENCE 2
+
+\bibliographystyle{copernicus}
+\bibliography{biblio.bib}
+
+%\end{thebibliography}
+
+%% Since the Copernicus LaTeX package includes the BibTeX style file copernicus.bst,
+%% authors experienced with BibTeX only have to include the following two lines:
+%%
+%% \bibliographystyle{copernicus}
+%% \bibliography{example.bib}
+%%
+%% URLs and DOIs can be entered in your BibTeX file as:
+%%
+%% URL = {http://www.xyz.org/~jones/idx_g.htm}
+%% DOI = {10.5194/xyz}
+
+
+%% LITERATURE CITATIONS
+%%
+%% command                        & example result
+%% \citet{jones90}|               & Jones et al. (1990)
+%% \citep{jones90}|               & (Jones et al., 1990)
+%% \citep{jones90,jones93}|       & (Jones et al., 1990, 1993)
+%% \citep[p.~32]{jones90}|        & (Jones et al., 1990, p.~32)
+%% \citep[e.g.,][]{jones90}|      & (e.g., Jones et al., 1990)
+%% \citep[e.g.,][p.~32]{jones90}| & (e.g., Jones et al., 1990, p.~32)
+%% \citeauthor{jones90}|          & Jones et al.
+%% \citeyear{jones90}|            & 1990
+
+
+
+%% FIGURES
+
+%% When figures and tables are placed at the end of the MS (article in one-column style), please add \clearpage
+%% between bibliography and first table and/or figure as well as between each table and/or figure.
+
+
+%% ONE-COLUMN FIGURES
+
+%%f
+%\begin{figure}[h!]
+%\includegraphics[width=8.3cm]{FILE NAME}
+%\caption{TEXT}
+%\end{figure}
+%
+%%% TWO-COLUMN FIGURES
+%
+%%f
+%\begin{figure*}[h!]
+%\includegraphics[width=12cm]{FILE NAME}
+%\caption{TEXT}
+%\end{figure*}
+%
+%
+%%% TABLES
+%%%
+%%% The different columns must be seperated with a & command and should
+%%% end with \\ to identify the column brake.
+%
+%%% ONE-COLUMN TABLE
+%
+%%t
+%\begin{table}[h!]
+%\caption{TEXT}
+%\begin{tabular}{column = lcr}
+%\tophline
+%
+%\middlehline
+%
+%\bottomhline
+%\end{tabular}
+%\belowtable{} % Table Footnotes
+%\end{table}
+%
+%%% TWO-COLUMN TABLE
+%
+%%t
+%\begin{table*}[h!]
+%\caption{TEXT}
+%\begin{tabular}{column = lcr}
+%\tophline
+%
+%\middlehline
+%
+%\bottomhline
+%\end{tabular}
+%\belowtable{} % Table Footnotes
+%\end{table*}
+%
+%%% LANDSCAPE TABLE
+%
+%%t
+%\begin{sidewaystable*}[h!]
+%\caption{TEXT}
+%\begin{tabular}{column = lcr}
+%\tophline
+%
+%\middlehline
+%
+%\bottomhline
+%\end{tabular}
+%\belowtable{} % Table Footnotes
+%\end{sidewaystable*}
+%
+%
+%%% MATHEMATICAL EXPRESSIONS
+%
+%%% All papers typeset by Copernicus Publications follow the math typesetting regulations
+%%% given by the IUPAC Green Book (IUPAC: Quantities, Units and Symbols in Physical Chemistry,
+%%% 2nd Edn., Blackwell Science, available at: http://old.iupac.org/publications/books/gbook/green_book_2ed.pdf, 1993).
+%%%
+%%% Physical quantities/variables are typeset in italic font (t for time, T for Temperature)
+%%% Indices which are not defined are typeset in italic font (x, y, z, a, b, c)
+%%% Items/objects which are defined are typeset in roman font (Car A, Car B)
+%%% Descriptions/specifications which are defined by itself are typeset in roman font (abs, rel, ref, tot, net, ice)
+%%% Abbreviations from 2 letters are typeset in roman font (RH, LAI)
+%%% Vectors are identified in bold italic font using \vec{x}
+%%% Matrices are identified in bold roman font
+%%% Multiplication signs are typeset using the LaTeX commands \times (for vector products, grids, and exponential notations) or \cdot
+%%% The character * should not be applied as mutliplication sign
+%
+%
+%%% EQUATIONS
+%
+%%% Single-row equation
+%
+%\begin{equation}
+%
+%\end{equation}
+%
+%%% Multiline equation
+%
+%\begin{align}
+%& 3 + 5 = 8\\
+%& 3 + 5 = 8\\
+%& 3 + 5 = 8
+%\end{align}
+%
+%
+%%% MATRICES
+%
+%\begin{matrix}
+%x & y & z\\
+%x & y & z\\
+%x & y & z\\
+%\end{matrix}
+%
+%
+%%% ALGORITHM
+%
+%\begin{algorithm}
+%\caption{...}
+%\label{a1}
+%\begin{algorithmic}
+%...
+%\end{algorithmic}
+%\end{algorithm}
+%
+%
+%%% CHEMICAL FORMULAS AND REACTIONS
+%
+%%% For formulas embedded in the text, please use \chem{}
+%
+%%% The reaction environment creates labels including the letter R, i.e. (R1), (R2), etc.
+%
+%\begin{reaction}
+%%% \rightarrow should be used for normal (one-way) chemical reactions
+%%% \rightleftharpoons should be used for equilibria
+%%% \leftrightarrow should be used for resonance structures
+%\end{reaction}
+%
+%
+%%% PHYSICAL UNITS
+%%%
+%%% Please use \unit{} and apply the exponential notation
+
+
+\end{document}
